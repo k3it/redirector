@@ -1,5 +1,5 @@
 require 'sinatra'
 
-get %r{(.*)} do
+get "*" do
   redirect to("https://phasingserver.stats.ox.ac.uk"+request.fullpath), 301
 end
