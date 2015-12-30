@@ -1,10 +1,15 @@
 # Redirect server
 
-Sends a 301 redirect to the https phasingserver to anyone requesting
-an http connection.
+Sends a 301 redirect to TARGETHOST.  The full path of the request is kept. Only the host is rewritten.
+
+# Installation
+
+bundle install
 
 # Boot
 
+Redirect port 80 to port 443
+
 ````
-ruby app.rb -p 8081 -e production
+TARGETHOST="https://www.google.com" ruby app.rb -p 80 -e production
 ````
